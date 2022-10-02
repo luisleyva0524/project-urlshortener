@@ -71,7 +71,7 @@ app.get("/api/shorturl/:shorturl", async function(req, res) {
       if (!data) {
         throw new Error("Short URL not found.");
       }
-      res.redirect(data.shortUrl);
+      res.redirect(data.originalUrl);
     });
   } catch (e) {
     res.send({
